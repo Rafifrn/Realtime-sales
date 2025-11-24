@@ -1,13 +1,14 @@
 import { environment } from "@/configs/environment";
 import { createServerClient } from "@supabase/ssr";
 import { cookies } from "next/headers";
-import { env } from "process";
 
 type CreateClientOptions = {
   isAdmin?: boolean;
 };
 
-export async function createClient({ isAdmin = false }: CreateClientOptions) {
+export async function createClient({
+  isAdmin = false,
+}: CreateClientOptions = {}) {
   const cookieStore = await cookies();
   const { SUPABASE_URL, SUPABASE_ANON_KEY, SUPABASE_SERVICE_ROLE_KEY } =
     environment;
