@@ -9,7 +9,7 @@ export default function Home() {
     <div className="bg-muted flex justify-center items-center h-screen flex-col space-y-4">
       <h1 className="text-4xl font-semibold ">Welcome Muhammad Rafi Zhafran</h1>
       <Link href="/admin">
-        <Button className="bg-teal-500 text-white">Access Dashboard</Button>
+        <Button className="bg-pink-600 text-white">Access Dashboard</Button>
       </Link>
     </div>
   );
